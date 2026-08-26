@@ -5,27 +5,25 @@ import HomePage from './pages/homePage'
 import TrendingProducts from './components/trendingProduct'
 import TestPage from './pages/test'
 import LoginPage from './pages/loginPage'
-
+import { Toaster } from 'react-hot-toast'
 
 function App() {
   
   return (
-      
-        <div className="w-full h-screen flex justify-center items-center bg-primary text-secondary">
+    <div className="w-full h-screen flex justify-center items-center bg-primary text-secondary">
 
-          <Routes>
+      <Toaster position='top-right' />
 
-           <Route path='/' element={<HomePage />} />
-            <Route path='/admin/*' element={<AdminPage/>} />
-            <Route path='/test' element={<TestPage/>}/>
-            <Route path='/login' element={<LoginPage/>}/>
+      <Routes>
 
-          </Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route path='/admin/*' element={<AdminPage />} />
+        <Route path='/test' element={<TestPage />} />
+        <Route path='/login' element={<LoginPage />} />
 
-         
-        </div>
-        
-   
+      </Routes>
+
+    </div>
   )
 }
 
