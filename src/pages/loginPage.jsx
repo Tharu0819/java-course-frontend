@@ -26,11 +26,11 @@ export default function LoginPage(){
             if(response.data.isAdmin){
                 //redirect to admin dashbord
                // window.location.href = "/admin"
-               //navigate("/admin")
+               navigate("/admin")
             }else{
                 //redirect to homepage
                 //window.location.href = "/"
-               // navigate("/")
+                navigate("/")
             }
            
         }).catch((error)=>{
